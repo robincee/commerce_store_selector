@@ -1,0 +1,8 @@
+name: 'Commerce Store Selector'
+description: 'A very simple module that exposes the available stores in a select dropdown and on submit sets a cookie.'
+package: 'Commerce contrib'
+dependencies:
+  - block
+  - commerce_store
+core: 8.x
+type: module
