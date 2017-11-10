@@ -1,6 +1,6 @@
 services:
   commerce_store_selector.cookie_demo_store_resolver:
-    class: Drupal\commerce_store_selector\Resolver\CookieDemoStoreResolver
+    class: Drupal\commerce_store_selector\Resolver\StoreSelectorCookieResolver
     arguments: ['@entity_type.manager', '@request_stack']
     tags:
       - { name: commerce_store.store_resolver, priority: 100 }

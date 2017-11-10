@@ -4,13 +4,12 @@ namespace Drupal\commerce_store_selector\Resolver;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\commerce_store\Resolver\StoreResolverInterface;
-use Drupal\commerce_store\Entity\Store;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Returns the store for an ID set in a cookie.
  */
-class CookieDemoStoreResolver implements StoreResolverInterface {
+class StoreSelectorCookieResolver implements StoreResolverInterface {
 
   /**
    * The store storage.
@@ -47,8 +46,9 @@ class CookieDemoStoreResolver implements StoreResolverInterface {
     $store_id = (int) $current_request->cookies->get('Drupal_visitor_store_id');
     if ($store_id) {
       $store = $this->storage->load($store_id);
-      return $store;
+      return !empty($store) ? $store : NULL;
     }
     return NULL;
   }
+
 }

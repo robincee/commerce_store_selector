@@ -1,17 +1,11 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\commerce_store_selector\Plugin\Block\StoreSelectionBlock.
- */
-
 namespace Drupal\commerce_store_selector\Plugin\Block;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
-use Drupal\Core\Form\FormInterface;
 
 /**
  * Provides a block with a simple text.
@@ -22,6 +16,7 @@ use Drupal\Core\Form\FormInterface;
  * )
  */
 class StoreSelectionBlock extends BlockBase {
+
   /**
    * {@inheritdoc}
    */
