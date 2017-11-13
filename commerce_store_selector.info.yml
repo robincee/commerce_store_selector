@@ -3,6 +3,7 @@ description: 'A very simple module that exposes the available stores in a select
 package: 'Commerce contrib'
 dependencies:
   - block
+  - user
   - commerce_store
 core: 8.x
 type: module
