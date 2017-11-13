@@ -157,11 +157,10 @@ class StoreSelectForm extends FormBase {
 
     // Set default value.
     $form['store_id']['#default_value'] = $current_store->id();
+    $store_name = check_markup($current_store->getName());
 
     $form['store_markup_default'] = [
-      '#markup' => $this->t('Current store: @name', [
-        '@name' => $current_store->getName(),
-      ]),
+      '#markup' => '<label>' . $this->t('Current store:') . '</label><span>'.$store_name.'</span>',
       '#weight' => 1,
       '#suffix' => '</br>',
     ];
